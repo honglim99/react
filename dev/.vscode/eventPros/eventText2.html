@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="in1" />
+        <button id="button">add</button>
+    </div>
+    <div id="list" class="container"></div>
+    <script>
+        // 1. 이벤트 붙일 요소를 가져오기
+        const el = document.getElementById('button');
+
+        // 2. 이벤트 처리기 정의하기
+        function onClickAdd() {
+            // 1. 입력창의 내용 가져오기
+            const inputEl = document.getElementById('in1');
+            console
+
+            // 2. li 태그 생성, li요소에 텍스트 추가
+            const newLi = document.createElement('li');
+            newLi.textContent = inputEl.value;
+
+            // 3. li 태그를 붙일 상위 요소 container 가져오기
+            const newList = document.getElementById('list');
+
+            // 4. li 태그를 container에 추가
+            newList.appendChild(newLi);
+        }
+
+        el.addEventListener("click", function () {
+            onClickAdd();
+        });
+    </script> 
+</body>
+</html>
