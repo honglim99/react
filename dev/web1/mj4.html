@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 익명 함수 선언 : 함수 이름이 없는 경우로 함수 자체가 식(expression)이 된다.(표현식)
+        // 사용방법 : function() {}
+        // function(a, b) { // 함수 호출 방법 없음
+        //     return a*b;
+        // }
+        // 익명함수 정의하면서 변수에 결과를 저장
+        const mul = function(a,b){
+            return a*b;
+        }
+
+        result = mul(2,3);
+
+        // 화살표 함수(=>) : ES6에서 도입됨. 익명함수에만 사용 가능하다.
+        // 사용법: (매개변수) => {함수 내용}
+        // 1. 매개변수 없을 경우 화살표 함수 사용법
+        /*
+        const hi = function(){
+            return "안녕하세요";
+        }
+        */
+        const hi = () => {
+            return "안녕하세요";
+        }
+        console.log(hi());
+        // 함수 실행문이 1개인 경우에는 중괄호와 리턴 키워드를 생략할 수 있다.
+        const hi2 = () => "안녕하세요";
+        console.log(hi2());
+
+        // 함수의 매개변수가 1개인 경우
+        const hi3 = (user) => {
+            return `${user}님 반갑습니다.`;
+        }
+        console.log(hi3("홍길동"));
+
+        // 매개변수 괄호 생략 가능, 실행문이 한개일 경우 중괄호, 리턴키워드 생략가능
+        const hi4 = user => {
+            return `${user}님 반갑습니다.`;
+        }
+        console.log(hi4("강감찬"));
+
+        // 매개변수가 2개 이상인 경우, 괄호 생략할 수 없음.
+        const sum = (a, b) => {
+            return a+b;
+        }
+        console.log(sum(2,3));
+        /*
+        const func3 = function (value) {
+            return value;
+        };
+        console.log(func3("func3입니다."));
+        */
+        const func3 = value => {
+            return value;
+        }
+        console.log(func3("func3입니다."))
+
+        const func5 = (value1, value2) => {
+            return value1 + value2;
+        }
+        console.log(func5(2,3));
+        // ()를 이용해 한행으로 모으기, 반환값이 여러행일 경우에는 ()로 감싼후에 단위행과 같이 모아서 반환한다.
+        const func9 = (val1, val2) => ({
+            name: val1,
+            age: val2,
+        });
+        console.log(func9("팝콘", 24));
+        const name = func9("팝콘", 24).name;
+        const age = func9("팝콘", 24).age;
+        console.log(`${name}님의 나이는 ${age}입니다.`)
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. <p> 요소 생성
+            var h1Ele = document.createElement("h1");
+            // 2. <p> 요소에 텍스트 내용을 추가
+            h1Ele.textContent = "첫 실습 - DOM 제어 프로그램";
+            // 3. id가 'pop'인 div 요소 가져오기
+            var h1Id = document.getElementById('root');
+            // 4. div 요소에 p 요소를 붙이기
+            h1Id.appendChild(h1Ele);
+            // 1. 새로운 요소 생성
+            var pEle = document.createElement("p");
+            // 2. <p> 요소에 텍스트 내용을 추가
+            pEle.textContent = "자바스크립트로 DOM 제어는 재미있습니다.";
+            // 3. id가 'pop'인 div 요소 가져오기
+            var pId = document.getElementById('root');
+            // 4. div 요소에 p 요소를 붙이기
+            pId.appendChild(pEle);
+        })
+    </script>
+</body>
+</html>
+
+
+
+<!--실습1. id = 'root'인 div 아래에
+    <h1>첫 실습-DOM 제어 프로그램</h1>
+    <p>자바스크립트로 DOM 제어는 재미있습니다.</p>
+    
+    실습2.mjLab1.html
+    모던 자바스크립트 연습
+    const num1 = 5;
+    const num2 = 7;
+    함수선언 : 두 수를 입력받아서 더한결과를 리턴하는 함수 add(num1, num2){}
+    템플릿 출력 -> 두 수의 합의 결과는 5 + 7 = 12입니다.
+    -->

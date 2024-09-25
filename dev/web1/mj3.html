@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트 함수 정의(=선언)
+        // 2개의 매개변수를 받아서 결과를 출력하는 함수
+        // 함수 정의
+        function addNums(a, b) {
+            console.log(a+b);
+            return a+b;
+        }
+        // 함수 호출
+        result = addNums(2,3);
+        console.log(result);  // 5
+
+        // 매개변수에 기본값 저장하기
+        function multiple(a, b=5, c=10) { // 매개변수에 기본값을 지정하면 호출을 유연하게 할 수 있다.
+            return a*b+c;
+        }
+
+        //multiple 함수 호출
+        console.log(multiple(2,3,5)); //11
+        console.log(multiple(2,3));   //16
+        console.log(multiple(2));   //20
+        console.log(multiple());   //a에 대응되는 값이 전달되지 않을 경우, 연산이 불가함 NaN 출력
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 디폴트값 사용하기 : 값이 지정되지 않았는데, 사용할 경우의 불편함 해결하기 위한 기능
+        // 1. 익명함수식에서 매개변수값 전달되지 않을 경우 디폴트값 사용
+        const sayHello = (name)=>{ console.log(`${name}님 안녕하세요`)}
+        sayHello("홍길동");
+        //매개변수값을 전달하지 않고 함수 호출할 경우
+        sayHello(); //undefined 님 안녕하세요 출력
+
+        //함수 정의할 때, 매개변수의 값을 지정해줌.(디폴트값 지정)
+        const sayHello2 = (name="guest")=> console.log(`${name}님 안녕하세요`)
+        sayHello2();
+
+        // 2. 객체 분할 대입시 디폴값 사용
+        const myProfile = {
+            age: 24,
+        }
+
+        const {name, age} = myProfile
+        console.log(`${name}님의 나이는 ${age}입니다.`);
+    </script>
+</body>
+</html>

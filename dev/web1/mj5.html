@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 분할 대입은 객체의 속성을 참조할 경우 사용된다.
+        // 객체 속성값 참조 방법 : 객체명, 속성명
+        // 객체의 속성이 많을 경우, 기존 속성값 참조법은 코드 작성이 불편함.
+        // 그래서 만들어진 것이 분할 대입.
+        const myProfile = {
+            name: "팝콘",
+            age: 24,
+            gender: "W",
+        };
+        // 위 사항을 출력한다면...
+        const message = `이름은 ${myProfile.name}, 나이는 ${myProfile.age}, 성별은 ${myProfile.gender}입니다.`;
+        console.log(message);
+        // 분할 대입방법으로 표현
+        // const {name, age, gender} = myProfile;
+        // const message2 = `이름은 ${name}, 나이는 ${age}, 성별은 ${gender}입니다.`;
+        // console.log(message2);
+        //분할 대입의 특징 1. 객체 속성값 일부만 추출 가능
+        const {name2, age2} = myProfile;
+        const message3 = `이름은 ${name2}, 나이는 ${age2}세 입니다.`;
+        console.log(message3);
+
+        // 분할 대입의 특징 2. 속성명 순서를 바꾸어 추출할 수 있다
+        const {age, name} = myProfile;
+        const message4 = `이름은 ${name}, 나이는 ${age}세 입니다.`;
+        console.log(message4);
+
+        // 특징 3  추출한 속성명에 별명을 지정할 수 있다
+        const {name: newName, age:newAge} = myProfile
+        const message5 = `이름은 ${newName}, 나이는 ${newAge}세 입니다.`;
+
+        const [name3, age3] = myProfile2;
+        
+    </script>
+</body>
+</html>
