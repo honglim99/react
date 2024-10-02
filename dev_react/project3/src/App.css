@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  width: 1000px;
+  /* height: 200px; */
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.h1Style {
+  color:red
+}
+
+.pStyle {
+  background-color:yellow;
+  color:blue;
+  font-size: 24px;
+}
+
+.Menu {
+  text-align: right;
+  background-color: black;
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+.Contents {
+  display: flex;
+  align-items: center;
+}
+.Image {
+  width: 150px;
+  float: left;
+  margin-right: 20px;
+}
+.Para1 {
+  margin-left: auto;
+}
+  
