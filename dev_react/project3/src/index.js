@@ -9,8 +9,14 @@ import reportWebVitals from './reportWebVitals';
 // import NameForm from './chap11/NameForm';
 // import SelectTag from './chap11/SelectTag';
 // import SelectMultiple from './chap10/SelectMultiple';
-import UseForm from './chap11/UseForm';
-import ImageList from './chap10/ImageList';
+// import UseForm from './chap11/UseForm';
+// import ImageList from './chap10/ImageList';
+// import Calculator from './chap12/Calculator';
+// import FancyBorder from './chap14/FancyBorder';
+// import WelcomeDialog from './chap14/WelcomeDialog';
+import SignUpDialog from './chap14/SignUpDialog';
+import TodoListApp from './chap12/TodoListApp';
+import TodoApp from './chap14/TodoApp';
 // import StudentList from './chap10/StudentList';
 // import ConfirmDialog from './components/ConfirmDialog';
 // import Library from "./chap03/Library"
@@ -121,17 +127,46 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </React.StrictMode>
 // )
 
-root.render(
-  <React.StrictMode>
-    <UseForm />
-  </React.StrictMode>
-)
+// root.render(
+//   <React.StrictMode>
+//     <UseForm />
+//   </React.StrictMode>
+// )
+// root.render(
+//   <React.StrictMode>
+//     <Calculator />
+//   </React.StrictMode>
+// )
 
 // root.render(
 //   <React.StrictMode>
 //     <ImageList />
 //   </React.StrictMode>
 // )
+
+// root.render(
+//   <React.StrictMode>
+//     <WelcomeDialog />
+//   </React.StrictMode>
+// )
+
+// root.render(
+//   <React.StrictMode>
+//     <TodoListApp />
+//   </React.StrictMode>
+// )
+
+// root.render(
+//   <React.StrictMode>
+//     <SignUpDialog />
+//   </React.StrictMode>
+// )
+
+root.render(
+  <React.StrictMode>
+    <TodoApp />
+  </React.StrictMode>
+)
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
