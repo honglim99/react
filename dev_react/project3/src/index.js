@@ -14,9 +14,11 @@ import reportWebVitals from './reportWebVitals';
 // import Calculator from './chap12/Calculator';
 // import FancyBorder from './chap14/FancyBorder';
 // import WelcomeDialog from './chap14/WelcomeDialog';
-import SignUpDialog from './chap14/SignUpDialog';
-import TodoListApp from './chap12/TodoListApp';
-import TodoApp from './chap14/TodoApp';
+// import SignUpDialog from './chap14/SignUpDialog';
+// import TodoListApp from './chap12/TodoListApp';
+// import TodoApp from './chap14/TodoApp';
+import App from './todoApp/App';
+import MiniApp from './movie/MiniApp';
 // import StudentList from './chap10/StudentList';
 // import ConfirmDialog from './components/ConfirmDialog';
 // import Library from "./chap03/Library"
@@ -162,9 +164,21 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </React.StrictMode>
 // )
 
+// root.render(
+//   <React.StrictMode>
+//     <TodoApp />
+//   </React.StrictMode>
+// )
+
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// )
+
 root.render(
   <React.StrictMode>
-    <TodoApp />
+    <MiniApp />
   </React.StrictMode>
 )
 // If you want to start measuring performance in your app, pass a function
