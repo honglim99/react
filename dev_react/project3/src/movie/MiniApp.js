@@ -86,6 +86,7 @@ const MiniApp = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
   const [currentPage, setCurrentPage] = useState("movies");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     setMovies(movieData);
@@ -104,12 +105,37 @@ const MiniApp = () => {
     setCurrentPage(page);
     setSelectedMovie(null);
     setSelectedBook(null);
+    setQuery("");
+    if (page === "movies") {
+      setMovies(movieData);
+    } else if (page === "books") {
+      setBooks(bookData);
+    }
+  };
+
+  const handleSearch = () => {
+    if (currentPage === "movies") {
+      setMovies(
+        movieData.filter((movie) =>
+          movie.title.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+    } else if (currentPage === "books") {
+      setBooks(
+        bookData.filter((book) =>
+          book.title.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+    } else {
+      setMovies(movieData);
+      setBooks(bookData);
+    }
   };
 
   return (
     <div className="App">
       <Menu onMenuClick={handleMenuClick} />
-      {currentPage !== 'home' && <SearchBar setMovies={setMovies} setBooks={setBooks} currentPage={currentPage} />}
+      {currentPage !== 'home' && <SearchBar query={query} setQuery={setQuery} handleSearch={handleSearch} currentPage={currentPage} />}
       {currentPage === "home" && <AboutMe />}
       {currentPage === "movies" &&
         (selectedMovie ? (

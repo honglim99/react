@@ -1,25 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = ({ setMovies, setBooks, currentPage }) => {
-  const [query, setQuery] = useState("");
-
-  const handleSearch = () => {
-    if (currentPage === "movies") {
-      setMovies((prevMovies) =>
-        prevMovies.filter((movie) =>
-          movie.title.toLowerCase().includes(query.toLowerCase())
-        )
-      );
-    } else if (currentPage === "books") {
-      setBooks((prevBooks) =>
-        prevBooks.filter((book) =>
-          book.title.toLowerCase().includes(query.toLowerCase())
-        )
-      );
-    }
-  }
-
+const SearchBar = ({ query, setQuery, handleSearch, currentPage }) => {
   return (
     <div className="search-bar">
       <input
